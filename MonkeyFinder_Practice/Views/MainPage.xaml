@@ -1,0 +1,48 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:model="clr-namespace:MonkeyFinder_Practice.Models"
+             x:Class="MonkeyFinder_Practice.MainPage">
+
+    <VerticalStackLayout Padding="10">
+        <Button 
+            x:Name="CounterBtn"
+            Text="Click Me"
+            FontSize="20"
+            Clicked="OnCounterClicked" />
+
+        <CollectionView>
+            <CollectionView.ItemsSource>
+                <x:Array Type="{x:Type model:Monkey}">
+                    <model:Monkey 
+                        Name="Monkey-1"
+                        Image="https://raw.githubusercontent.com/jamesmontemagno/app-monkeys/master/bluemonkey.jpg"
+                        Location="Center Dhaka, Bangladesh" />
+                    <model:Monkey
+                        Name="Monkey-2"
+                        Image="https://raw.githubusercontent.com/jamesmontemagno/app-monkeys/master/bluemonkey.jpg"
+                        Location="Khulna, Bangladesh"/>
+                    <model:Monkey
+                        Name="Monkey-3"
+                        Image="https://raw.githubusercontent.com/jamesmontemagno/app-monkeys/master/bluemonkey.jpg"
+                        Location="Chittagong, Bangladesh"/>
+                </x:Array>
+            </CollectionView.ItemsSource>
+            <CollectionView.ItemTemplate>
+                <DataTemplate x:DataType="model:Monkey">
+                    <HorizontalStackLayout Padding="10">
+                        <Image Source="{Binding Image}"
+                               HeightRequest="100"
+                               WidthRequest="100"
+                               Aspect="AspectFill"/>
+                        <VerticalStackLayout Padding="10">
+                            <Label Text="{Binding Name}" FontSize="20"/>
+                            <Label Text="{Binding Location}"/>
+                        </VerticalStackLayout>
+                    </HorizontalStackLayout>
+                </DataTemplate>
+            </CollectionView.ItemTemplate>
+        </CollectionView>
+    </VerticalStackLayout>
+
+</ContentPage>

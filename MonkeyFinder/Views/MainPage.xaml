@@ -1,0 +1,86 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:model="clr-namespace:MonkeyFinder.Models"
+             x:Class="MonkeyFinder.MainPage">
+
+
+    <VerticalStackLayout Padding="10" Spacing="10">
+        <Button 
+            x:Name="btnClick"
+            Text="Click Me" 
+            FontSize="20"
+            Clicked="onButtonClick"/>
+
+        <CollectionView>
+            <CollectionView.ItemsSource>
+                <x:Array Type="{x:Type model:Monkey}">
+                    <model:Monkey 
+                        Name="Baboon"
+                        Image="https://raw.githubusercontent.com/jamesmontemagno/app-monkeys/master/baboon.jpg"
+                        Location="Africa and Asia"/>
+                    <model:Monkey 
+                        Name="Capuchin Monkey"
+                        Image="https://raw.githubusercontent.com/jamesmontemagno/app-monkeys/master/capuchin.jpg"
+                        Location="Central and South America"/>
+                    <model:Monkey 
+                        Name="Red-shanked douc"
+                        Image="https://raw.githubusercontent.com/jamesmontemagno/app-monkeys/master/bluemonkey.jpg"
+                        Location="Central and East Africa"/>
+                </x:Array>
+            </CollectionView.ItemsSource>
+            <CollectionView.ItemTemplate>
+                <DataTemplate x:DataType="model:Monkey">
+                    <!-- DataTemplate can be multiple -->
+                    <HorizontalStackLayout Padding="10">
+                        <Image Source="{Binding Image}"
+                               HeightRequest="100"
+                               WidthRequest="100"
+                               Aspect="AspectFill" />
+                        <VerticalStackLayout Padding="10" Spacing="4" VerticalOptions="Start">
+                            <Label Text="{Binding Name}" FontSize="20"/>
+                            <Label Text="{Binding Location}" FontSize="10"/>
+                        </VerticalStackLayout>
+                    </HorizontalStackLayout>
+                </DataTemplate>
+            </CollectionView.ItemTemplate>
+        </CollectionView>
+    </VerticalStackLayout>
+
+
+    <!--<ScrollView>
+        <VerticalStackLayout
+            Spacing="25"
+            Padding="30,0"
+            VerticalOptions="Center">
+
+            <Image
+                Source="dotnet_bot.png"
+                SemanticProperties.Description="Cute dot net bot waving hi to you!"
+                HeightRequest="200"
+                HorizontalOptions="Center" />
+
+            <Label
+                Text="Hello, World!"
+                SemanticProperties.HeadingLevel="Level1"
+                FontSize="32"
+                HorizontalOptions="Center" />
+
+            <Label
+                Text="Welcome to .NET Multi-platform App UI"
+                SemanticProperties.HeadingLevel="Level2"
+                SemanticProperties.Description="Welcome to dot net Multi platform App U I"
+                FontSize="18"
+                HorizontalOptions="Center" />
+
+            <Button
+                x:Name="CounterBtn"
+                Text="Click me"
+                SemanticProperties.Hint="Counts the number of times you click"
+                Clicked="OnCounterClicked"
+                HorizontalOptions="Center" />
+
+        </VerticalStackLayout>
+    </ScrollView>-->
+
+</ContentPage>
