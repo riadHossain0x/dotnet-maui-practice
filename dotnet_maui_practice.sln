@@ -11,7 +11,9 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "DataBinding", "DataBinding"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MauiAppDemo", "DataBinding\MauiAppDemo\MauiAppDemo.csproj", "{357E3C40-8798-4402-A6EF-529A27CBB768}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DataBinding_Practice", "DataBinding\DataBinding_Practice\DataBinding_Practice.csproj", "{9473323E-4351-4687-97AE-7D382AF7423D}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DataBinding_Practice", "DataBinding\DataBinding_Practice\DataBinding_Practice.csproj", "{9473323E-4351-4687-97AE-7D382AF7423D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DataBinding_CommunityToolkit", "DataBinding_CommunityToolkit\DataBinding_CommunityToolkit.csproj", "{4F84377D-DC06-4378-898F-60A01CA03852}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -43,6 +45,12 @@ Global
 		{9473323E-4351-4687-97AE-7D382AF7423D}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{9473323E-4351-4687-97AE-7D382AF7423D}.Release|Any CPU.Build.0 = Release|Any CPU
 		{9473323E-4351-4687-97AE-7D382AF7423D}.Release|Any CPU.Deploy.0 = Release|Any CPU
+		{4F84377D-DC06-4378-898F-60A01CA03852}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4F84377D-DC06-4378-898F-60A01CA03852}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4F84377D-DC06-4378-898F-60A01CA03852}.Debug|Any CPU.Deploy.0 = Debug|Any CPU
+		{4F84377D-DC06-4378-898F-60A01CA03852}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4F84377D-DC06-4378-898F-60A01CA03852}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4F84377D-DC06-4378-898F-60A01CA03852}.Release|Any CPU.Deploy.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -50,6 +58,7 @@ Global
 	GlobalSection(NestedProjects) = preSolution
 		{357E3C40-8798-4402-A6EF-529A27CBB768} = {EA113B20-AF3A-41B0-98D8-81C2C0D57DDC}
 		{9473323E-4351-4687-97AE-7D382AF7423D} = {EA113B20-AF3A-41B0-98D8-81C2C0D57DDC}
+		{4F84377D-DC06-4378-898F-60A01CA03852} = {EA113B20-AF3A-41B0-98D8-81C2C0D57DDC}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {61F7FB11-1E47-470C-91E2-47F8143E1572}
