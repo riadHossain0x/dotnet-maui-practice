@@ -1,9 +1,17 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:MauiAppDemo"
              xmlns:model="clr-namespace:MauiAppDemo.ViewModels"
              x:DataType="model:MainPageViewModel"
              x:Class="MauiAppDemo.MainPage">
+
+    <ContentPage.Resources>
+        <local:ExchangeRateValueConverter CurrencySymbol="USD" x:Key="UsdConverter"/>
+        <local:ExchangeRateValueConverter CurrencySymbol="EUR" x:Key="EurConverter"/>
+        <local:ExchangeRateValueConverter CurrencySymbol="AUD" x:Key="AudConverter"/>
+    </ContentPage.Resources>
+
 
     <ScrollView>
         <VerticalStackLayout
@@ -24,21 +32,21 @@
                 HorizontalOptions="Center" />
 
             <Label
-                Text="{Binding UsdRate}"
+                Text="{Binding UsdRate, Converter = {StaticResource UsdConverter}}"
                 SemanticProperties.HeadingLevel="Level2"
                 SemanticProperties.Description="Welcome to dot net Multi platform App U I"
                 FontSize="18"
                 HorizontalOptions="Center" />
 
             <Label
-                Text="{Binding EurRate}"
+                Text="{Binding EurRate, Converter = {StaticResource EurConverter}}"
                 SemanticProperties.HeadingLevel="Level2"
                 SemanticProperties.Description="Welcome to dot net Multi platform App U I"
                 FontSize="18"
                 HorizontalOptions="Center" />
 
             <Label
-                Text="{Binding AudRate}"
+                Text="{Binding AudRate, Converter = {StaticResource AudConverter}}"
                 SemanticProperties.HeadingLevel="Level2"
                 SemanticProperties.Description="Welcome to dot net Multi platform App U I"
                 FontSize="18"
