@@ -4,7 +4,7 @@
              xmlns:model="clr-namespace:MonkeyFinder_Practice.Models"
              x:Class="MonkeyFinder_Practice.MainPage">
 
-    <VerticalStackLayout Padding="10">
+    <!--<VerticalStackLayout Padding="10">
         <Button 
             x:Name="CounterBtn"
             Text="Click Me"
@@ -43,6 +43,51 @@
                 </DataTemplate>
             </CollectionView.ItemTemplate>
         </CollectionView>
-    </VerticalStackLayout>
+    </VerticalStackLayout>-->
+
+    <Grid RowDefinitions="*,*">
+        <VerticalStackLayout Padding="10" Spacing="10" Grid.Row="0">
+            <Button 
+                x:Name="CounterBtn"
+                Text="Click Me"
+                FontSize="20"
+                Clicked="OnCounterClicked"/>
+            <Button 
+                x:Name="DeleteBtn"
+                Text="Delete"
+                FontSize="20"/>
+        </VerticalStackLayout>
+        <VerticalStackLayout Padding="10" Spacing="10" Grid.Row="1">
+            <CollectionView>
+                <CollectionView.ItemsSource>
+                    <x:Array Type="{x:Type model:Monkey}">
+                        <model:Monkey
+                            Image="https://raw.githubusercontent.com/jamesmontemagno/app-monkeys/master/bluemonkey.jpg"
+                            Name="Monkey-1"
+                            Location="Dhaka, Bangladesh"/>
+                        <model:Monkey
+                            Image="https://raw.githubusercontent.com/jamesmontemagno/app-monkeys/master/bluemonkey.jpg"
+                            Name="Monkey-2"
+                            Location="Khulna, Bangladesh"/>
+                    </x:Array>
+                </CollectionView.ItemsSource>
+                <CollectionView.ItemTemplate>
+                    <DataTemplate x:DataType="model:Monkey">
+                        <HorizontalStackLayout Spacing="10" Padding="10">
+                            <Image 
+                                Source="{Binding Image}" 
+                                WidthRequest="100" 
+                                HeightRequest="100" 
+                                Aspect="AspectFill"/>
+                            <VerticalStackLayout>
+                                <Label Text="{Binding Name}" FontSize="20"/>
+                                <Label Text="{Binding Location}"/>
+                            </VerticalStackLayout>
+                        </HorizontalStackLayout>
+                    </DataTemplate>
+                </CollectionView.ItemTemplate>
+            </CollectionView>
+        </VerticalStackLayout>
+    </Grid>
 
 </ContentPage>

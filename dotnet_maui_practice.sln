@@ -5,7 +5,11 @@ VisualStudioVersion = 17.0.31611.283
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MonkeyFinder", "MonkeyFinder\MonkeyFinder.csproj", "{92B2322A-57F6-4947-8F57-D81D268954E8}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MonkeyFinder_Practice", "MonkeyFinder_Practice\MonkeyFinder_Practice.csproj", "{E6845E66-D6A4-42EE-9989-E6AADAF58F42}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MonkeyFinder_Practice", "MonkeyFinder_Practice\MonkeyFinder_Practice.csproj", "{E6845E66-D6A4-42EE-9989-E6AADAF58F42}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "DataBinding", "DataBinding", "{EA113B20-AF3A-41B0-98D8-81C2C0D57DDC}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MauiAppDemo", "DataBinding\MauiAppDemo\MauiAppDemo.csproj", "{357E3C40-8798-4402-A6EF-529A27CBB768}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -25,9 +29,18 @@ Global
 		{E6845E66-D6A4-42EE-9989-E6AADAF58F42}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{E6845E66-D6A4-42EE-9989-E6AADAF58F42}.Release|Any CPU.Build.0 = Release|Any CPU
 		{E6845E66-D6A4-42EE-9989-E6AADAF58F42}.Release|Any CPU.Deploy.0 = Release|Any CPU
+		{357E3C40-8798-4402-A6EF-529A27CBB768}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{357E3C40-8798-4402-A6EF-529A27CBB768}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{357E3C40-8798-4402-A6EF-529A27CBB768}.Debug|Any CPU.Deploy.0 = Debug|Any CPU
+		{357E3C40-8798-4402-A6EF-529A27CBB768}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{357E3C40-8798-4402-A6EF-529A27CBB768}.Release|Any CPU.Build.0 = Release|Any CPU
+		{357E3C40-8798-4402-A6EF-529A27CBB768}.Release|Any CPU.Deploy.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{357E3C40-8798-4402-A6EF-529A27CBB768} = {EA113B20-AF3A-41B0-98D8-81C2C0D57DDC}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {61F7FB11-1E47-470C-91E2-47F8143E1572}
