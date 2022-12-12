@@ -1,0 +1,31 @@
+﻿<?xml version = "1.0" encoding = "UTF-8" ?>
+<Application xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:page="clr-namespace:TabDemo.Pages"
+             xmlns:local="clr-namespace:TabDemo"
+             x:Class="TabDemo.App">
+    <Application.Resources>
+        <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+                <ResourceDictionary Source="Resources/Styles/Colors.xaml" />
+                <ResourceDictionary Source="Resources/Styles/Styles.xaml" />
+            </ResourceDictionary.MergedDictionaries>
+        </ResourceDictionary>
+    </Application.Resources>
+
+    <Application.MainPage>
+        <Shell>
+            <TabBar x:Name="PhoneTabs">
+                <Tab Title="Home">
+                    <ShellContent ContentTemplate="{DataTemplate page:HomePage}"/>
+                </Tab>
+                <Tab Title="Setting">
+                    <ShellContent ContentTemplate="{DataTemplate page:SettingPage}"/>
+                </Tab>
+                <Tab Title="About">
+                    <ShellContent ContentTemplate="{DataTemplate page:AboutPage}"/>
+                </Tab>
+            </TabBar>
+        </Shell>
+    </Application.MainPage>
+</Application>
